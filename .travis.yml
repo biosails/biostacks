@@ -33,7 +33,7 @@ env:
   - MINICONDA_VER="4.3.21"
   - ANACONDA_USER='nyuad-cgsb'
   - GITHUB_USER='nyuad-cgsb'
-  - MY_TRAVIS_REPO_SLUG='biosails/bioconda-recipes'
+  - MY_TRAVIS_REPO_SLUG='biosails/biostacks'
   - CONTAINER_NAMESPACE='nyuad_cgsb'
   - CONDA_PKGS_DIRS='/home/travis/.conda/pkgs'
   - secure: l1x6DkLjbHdi5P5nalrNXzlVStxnbcmhDuUFA5geXuOuK5ddg7cfVqMxeQ28dvdAe3H1AIctvQjZsg0jlQItvycgL5YVKH9Hl6POkkROwX0qzMSpSlLh5XTcgvqjYRMLS82PSrbal/z7RZB4VInbxmG6ZgAqLPluJYRlqZ1Edv+iVfjgBXANlxKvn0PeMrcUaKkXPa1Qut4PUgL0tnJjTnpE4WcUy5o5eWgMky5QUHY8SaPwHc9wSZW8zVafzyMPs4CwQm0fiCyEdMS+RPkfuWf6HcrymdOfefUaFeSUc7e2pin7isGGOXXOO2EIETGd6I54X+tb1UhYvVleZcJFfBFRUE+ydvAE6uF9PcmAurszeukyN8WBoVm0vCyVwrWe5dPHhqpxNX0ysHzBEx+cUjxIJdl2EnNC/+t1qyE8m27/eRRCfgwYJn+aJJg5JAy0LMLPkTrq7fQP9i6R1Gdr6XFID55KzLLQRngde6g3EPEF/e68K3rVd+FMISjg80PvQl9LqGqPJl0z7ts51cMgx6phr+BLZRz7XL01pwhL+UwEg3pDTyWFaQ4PV0TbNbc8IROgAPOGQI9PHH1vn5Wegfsd3CyJd+EfIFvA13X5houLI4xSJNScNZZt79AalpfKBU5UVjgsJnKN1LtYoXQYDXsQ1QzJHKCyi8O1uCoCbPo=
