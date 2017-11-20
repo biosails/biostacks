@@ -1,7 +1,7 @@
 env_matrix: "scripts/env_matrix.yml"
 
 blacklists:
-    - "empty-blacklist"
+    - "sorted-r-blacklist"
 
 # Channels ordered from highest to lowest priority. This should match the order
 # of .condarc, but when adding channels using conda config --add, they should
