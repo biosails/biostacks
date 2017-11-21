@@ -8,7 +8,7 @@ cache:
   - "/home/travis/.conda/pkgs"
 jobs:
   include:
-  - stage: Linux+macOS
+  - stage: Linux
     if: "(type = push) AND ((branch IN (master, bulk)) OR (fork = true))"
     os: linux
     script: scripts/travis-run.sh
