@@ -8,7 +8,6 @@ set +u
 [[ -z $RANGE_ARG ]] && RANGE_ARG="--git-range master HEAD"
 [[ -z $DISABLE_BIOCONDA_UTILS_BUILD_GIT_RANGE_CHECK  ]] && DISABLE_BIOCONDA_UTILS_BUILD_GIT_RANGE_CHECK="false"
 [[ -z $SKIP_LINTING ]] && SKIP_LINTING=false
-# [[ -z $CONTAINER_NAMESPACE ]] && CONTAINER_NAMESPACE="nyuad_cgsb"
 set -u
 
 if [[ $TRAVIS_BRANCH != "master" && $TRAVIS_BRANCH != "bulk" && $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_REPO_SLUG == "$MY_TRAVIS_REPO_SLUG" ]]
@@ -111,6 +110,6 @@ fi
 
 set -x
 pip install --upgrade  git+https://github.com/jerowe/bioconda-utils.git@develop
-bioconda-utils build recipes config.yml $UPLOAD_ARG $DOCKER_ARG $BIOCONDA_UTILS_BUILD_ARGS $RANGE_ARG || echo "Build Failed!"
+bioconda-utils build recipes config.yml --channels nyuad-cgsb $UPLOAD_ARG $DOCKER_ARG $BIOCONDA_UTILS_BUILD_ARGS $RANGE_ARG || echo "Build Failed!"
 docker images
 set +x
