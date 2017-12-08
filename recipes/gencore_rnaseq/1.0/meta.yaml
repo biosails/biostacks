@@ -47,7 +47,7 @@ requirements:
 
 test:
   commands:
-    - bowtie2 --help 2>&1 | grep 'bowtie'
+    - bowtie2 --help 2>&1 | grep "bowtie"
 
 about:
   home: 'https://cgsb.abudhabi.nyu.edu/'
