@@ -73,7 +73,8 @@ export PATH=/anaconda/bin:$PATH
 # for local testing.
 if [[ $TRAVIS_OS_NAME == "linux" && $TRAVIS == "true" ]]
 then
-    DOCKER_ARG="--docker --mulled-test"
+    #DOCKER_ARG="--docker --mulled-test"
+    DOCKER_ARG=" --mulled-test"
 fi
 
 # When building master or bulk, upload packages to anaconda and quay.io.
