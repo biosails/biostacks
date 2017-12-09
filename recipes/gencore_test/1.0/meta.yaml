@@ -13,6 +13,7 @@ build:
 requirements:
   run:
     - perl
+    - cufflinks-patch
 
 test:
   commands:
