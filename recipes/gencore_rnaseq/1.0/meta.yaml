@@ -1,7 +1,6 @@
 {% set name = "gencore_rnaseq" %}
 {% set version = "1.0" %}
 
-
 package:
   name: {{ name }}
   version: {{ version }}
