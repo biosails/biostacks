@@ -29,7 +29,7 @@ requirements:
   - bamtools ==2.4.0
   - seqtk ==1.2
   ##Downstream processing
-  # - r-base
+  - r-base
   # - r-essentials
   # - r-cairo
   # - bioconductor-deseq2
