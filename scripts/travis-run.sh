@@ -73,7 +73,7 @@ export PATH=/anaconda/bin:$PATH
 # for local testing.
 if [[ $TRAVIS_OS_NAME == "linux" && $TRAVIS == "true" ]]
 then
-    DOCKER_ARG="--docker --mulled-test"
+    DOCKER_ARG="--mulled-test"
     #DOCKER_ARG=" --mulled-test"
 fi
 
