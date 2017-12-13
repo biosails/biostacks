@@ -18,5 +18,7 @@ RUN conda config --add channels conda-forge
 RUN conda config --add channels bioconda
 RUN conda config --add channels nyuad-cgsb
 
+RUN ls -lah /opt/conda/conda-bld/linux-64
 RUN conda config --add channels file://opt/conda/conda-bld/linux-64
-RUN conda install -y --use-local gencore_rnaseq 
+RUN conda index /opt/conda/conda-bld/linux-64
+RUN conda install -y --use-local gencore_rnaseq
