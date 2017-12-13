@@ -20,7 +20,6 @@ then
     exit 0
 fi
 
-export PATH=/anaconda/bin:$PATH
 
 # TODO Add another upload
 if [[ ( $TRAVIS_BRANCH == "master" || $TRAVIS_BRANCH == "bulk" ) && "$TRAVIS_PULL_REQUEST" == "false" && $TRAVIS_REPO_SLUG == "$MY_TRAVIS_REPO_SLUG" ]]
@@ -38,6 +37,8 @@ then
 fi
 
 set -x
+
+export PATH=/home/travis/anaconda3/bin:$PATH
 conda install -y conda-build-all
 conda-build-all recipes --inspect-channels nyuad-cgsb $UPLOAD_ARG
 ls -lahR $CONDA_BLD_PATH
