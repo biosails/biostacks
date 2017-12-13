@@ -24,10 +24,8 @@ done
 SCRIPT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 pip install pyyaml
-sudo mkdir /anaconda
 
 sudo chown -R $USER /opt/anaconda3
-sudo chown -R $USER /anaconda
 
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh --quiet -O miniconda.sh
 bash miniconda.sh -b -p /home/travis/anaconda3
@@ -37,8 +35,9 @@ conda config --set always_yes yes --set changeps1 no
 conda config --add channels r
 conda config --add channels conda-forge
 conda config --add channels bioconda
+conda config --add channels nyuad-cgsb
 
-conda index /anaconda/conda-bld/linux-64 /anaconda/conda-bld/osx-64
-conda config --add channels file://anaconda/conda-bld
+conda index /home/travis/anaconda3/conda-bld/linux-64 /home/travis/anaconda3/conda-bld/osx-64
+conda config --add channels file://home/travis/anaconda3/conda-bld
 conda install -y r-base r-essentials openjdk perl bioconductor-biobase nodejs
 npm install -g marked-man
