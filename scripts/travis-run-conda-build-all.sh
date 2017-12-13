@@ -44,9 +44,11 @@ conda install -y conda-build-all
 conda-build-all recipes --inspect-channels nyuad-cgsb $UPLOAD_ARG
 ls -lahR $CONDA_BLD_PATH
 
+echo "We should be building things now...."
+
 cp Dockerfile /opt/anaconda3
 cd /opt/anaconda3
-docker build --build-arg CONDA_PKG='gencore_rnaseq-1.0-r3.4.1_1.tar.bz2'
+travis_wait 30 docker build --build-arg CONDA_PKG='gencore_rnaseq-1.0-r3.4.1_1.tar.bz2'
 
 docker images
 set +x
