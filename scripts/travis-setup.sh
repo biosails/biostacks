@@ -37,7 +37,7 @@ conda config --add channels conda-forge
 conda config --add channels bioconda
 conda config --add channels nyuad-cgsb
 
-conda index /home/travis/anaconda3/conda-bld/linux-64 /home/travis/anaconda3/conda-bld/osx-64
+# conda index /home/travis/anaconda3/conda-bld/linux-64
 conda config --add channels file://home/travis/anaconda3/conda-bld
 conda install -y r-base r-essentials openjdk perl bioconductor-biobase nodejs
 npm install -g marked-man
