@@ -12,10 +12,11 @@ RUN mkdir -p /opt/conda/conda-bld/linux-64
 COPY pkgs/* /opt/conda/pkgs/
 COPY conda-bld/linux-64/${CONDA_PKG} /opt/conda/conda-bld/linux-64
 
-#RUN conda config --set always_yes yes --set changeps1 no
-#RUN conda config --add channels r
-#RUN conda config --add channels conda-forge
-#RUN conda config --add channels bioconda
-#RUN conda config --add channels nyuad-cgsb
-#
-#conda config --add channels file://opt/conda/conda-bld/linux-64
+RUN conda config --set always_yes yes --set changeps1 no
+RUN conda config --add channels r
+RUN conda config --add channels conda-forge
+RUN conda config --add channels bioconda
+RUN conda config --add channels nyuad-cgsb
+
+RUN conda config --add channels file://opt/conda/conda-bld/linux-64
+RUN conda install -y --use-local gencore_rnaseq 
