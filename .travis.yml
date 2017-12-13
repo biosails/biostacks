@@ -25,6 +25,18 @@ env:
   - CONTAINER_NAMESPACE: 'nyuad_cgsb'
   - CONDA_PKGS_DIRS: '/opt/anaconda3/pkgs'
   - CONDA_BLD_PATH: '/opt/anaconda3/conda-bld'
+  - CONDA_R: '3.4.1'
+  - CONDA_PERL: '5.22.0'
+  - CONDA_HTSLIB: "1.6"
+  - CONDA_BOOST: "1.64"
+  - CONDA_NPY: "112"
+  - CONDA_NCURSES: "5.9"
+  - CONDA_GSL: "1.16"
+  - CONDA_GMP: "5.1"
+  - CONDA_HDF5: "1.8.17"
+  - CONDA_ZLIB: "1.2.8"
+  - CONDA_BZIP2: "1.0"
+  - CONDA_XZ: "5.2"
   # - SUBDAGS=1
   # - BIOCONDA_UTILS_TAG=master
   # - BIOCONDA_UTILS_BUILD_ARGS="--loglevel=debug"
