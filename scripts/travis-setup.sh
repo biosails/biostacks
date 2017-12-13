@@ -30,8 +30,8 @@ sudo chown -R $USER /opt/anaconda3
 sudo chown -R $USER /anaconda
 
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-bash miniconda.sh -b -p /anaconda3
-export PATH="/anaconda3/bin:$PATH"
+bash miniconda.sh -b -p /anaconda
+export PATH="/anaconda/bin:$PATH"
 hash -r
 conda config --set always_yes yes --set changeps1 no
 conda config --add channels r
