@@ -30,15 +30,15 @@ sudo chown -R $USER /opt/anaconda3
 sudo chown -R $USER /anaconda
 
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh --quiet -O miniconda.sh
-bash miniconda.sh -b -p /anaconda
-export PATH="/anaconda/bin:$PATH"
+bash miniconda.sh -b -p /home/travis/anaconda3
+export PATH="/home/travis/anaconda3/bin:$PATH"
 hash -r
 conda config --set always_yes yes --set changeps1 no
 conda config --add channels r
 conda config --add channels conda-forge
 conda config --add channels bioconda
 
-/anaconda/bin/conda index /anaconda/conda-bld/linux-64 /anaconda/conda-bld/osx-64
-/anaconda/bin/conda config --add channels file://anaconda/conda-bld
-/anaconda/bin/conda install -y r-base r-essentials openjdk perl bioconductor-biobase nodejs
-/anaconda/bin/npm install -g marked-man
+conda index /anaconda/conda-bld/linux-64 /anaconda/conda-bld/osx-64
+conda config --add channels file://anaconda/conda-bld
+conda install -y r-base r-essentials openjdk perl bioconductor-biobase nodejs
+npm install -g marked-man
