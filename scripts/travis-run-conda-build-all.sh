@@ -38,6 +38,7 @@ then
 fi
 
 set -x
+conda install -y conda-build-all
 conda-build-all recipes --inspect-channels nyuad-cgsb $UPLOAD_ARG
 ls -lahR $CONDA_BLD_PATH
 
