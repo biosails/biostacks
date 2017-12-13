@@ -41,7 +41,7 @@ set -x
 
 export PATH=/home/travis/anaconda3/bin:$PATH
 conda install -y conda-build-all
-conda-build-all recipes --inspect-channels nyuad-cgsb $UPLOAD_ARG
+travis_wait 30 conda-build-all recipes --inspect-channels nyuad-cgsb $UPLOAD_ARG
 ls -lahR $CONDA_BLD_PATH
 
 echo "We should be building things now...."
