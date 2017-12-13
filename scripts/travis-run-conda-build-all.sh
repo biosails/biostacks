@@ -48,7 +48,7 @@ echo "We should be building things now...."
 
 cp Dockerfile /opt/anaconda3
 cd /opt/anaconda3
-docker build --build-arg CONDA_PKG='gencore_rnaseq-1.0-r3.4.1_1.tar.bz2' .
+docker build --build-arg CONDA_PKG='gencore_rnaseq-1.0-r3.4.1_1.tar.bz2' -t 'gencore_rnaseq:1.0-r3.4.1_1' .
 
 docker images
 set +x
